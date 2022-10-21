@@ -29,6 +29,18 @@
       </figure>
      </div>
 
+     <div class="main__phrase">
+      <p>
+        3,333 shinobis set to takeover the Aptos blockchain. Get ready to claim your legend.
+      </p>
+      <p>
+        3,333 shinobis set to takeover the Aptos blockchain. Get ready to claim your legend.
+      </p>
+      <p>
+        3,333 shinobis set to takeover the Aptos blockchain. Get ready to claim your legend.
+      </p>
+     </div>
+
      <div class="main__mint">
         <button class="main__mint--soon">
           minting soon
@@ -162,11 +174,55 @@ export default {}
     }
   }
 
+  &__phrase {
+    font-size: #{scaleValue(25)};
+    font-weight: 400;
+    margin: #{scaleValue(80)} auto;
+    width: #{scaleValue(1000)};
+    text-align: center;
+    line-height: 0;
+
+     animation: dropin 1.2s ease-in-out alternate;
+
+     @media only screen and (max-width: 414px) {
+       font-size: #{scaleValue(100)};
+       margin: #{scaleValue(160)} auto;
+       width: auto;
+
+       line-height: #{scaleValue(150)};
+       position: relative;
+     }
+
+    & p {
+        color: #d9fff9;
+        animation: glitch1 0.5s infinite;
+        display: block;
+
+        letter-spacing: #{scaleValue(1)};
+        font-weight: 300;
+        margin: 0;
+
+        @media only screen and (max-width: 414px) {
+          position: absolute;
+        }
+
+        &:nth-child(2) {
+          color: #0ef0e1;
+          animation: glitch2 2s infinite;
+        }
+
+        &:nth-child(3) {
+          color: #ff94eb;
+          animation: glitch3 2s infinite;
+        }
+      }
+  }
+
   &__mint {
-    margin-top: #{scaleValue(100)};
+    margin-top: #{scaleValue(70)};
 
     @media only screen and (max-width: 414px) {
-      margin-top: #{scaleValue(180)};
+      margin-top: #{scaleValue(840)};
     }
 
     display: flex;
